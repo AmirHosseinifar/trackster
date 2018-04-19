@@ -2,6 +2,13 @@ $(document).ready(function(){
 
   const API_KEY = 'e6c125d795116f5ac59abd4b047bb941';
   var Trackster = {};
+
+  $('input').keydown(function(e){
+    if(e.which == 13) {
+      Trackster.searchTracksByTitle($('input').val());
+    }
+  })
+  
   $("#search").click(function(){
     Trackster.searchTracksByTitle($('input').val());
   })
