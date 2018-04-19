@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  
+
   const API_KEY = 'e6c125d795116f5ac59abd4b047bb941';
   var Trackster = {};
   $("#search").click(function(){
@@ -22,7 +22,7 @@ $(document).ready(function(){
       '<div class="col-xs-3">'+tracks[i].name+'</div>' +
       '<div class="col-xs-2">'+tracks[i].artist+'</div>' +
       '<div class="col-xs-2"><img src="' + tracks[i].image[1]['#text'] + '"/></div>' +
-      '<div class="col-xs-1 col-xs-offset-1">'+tracks[i].listeners+'</div>' +
+      '<div class="col-xs-1 col-xs-offset-1">'+numeral(tracks[i].listeners).format('0,0')+'</div>' +
       '<div class="col-xs-1">'+tracks[i].streamable+'</div>' + 
     '</div>'; 
 
