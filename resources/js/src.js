@@ -8,7 +8,7 @@ $(document).ready(function(){
       Trackster.searchTracksByTitle($('input').val());
     }
   })
-  
+
   $("#search").click(function(){
     Trackster.searchTracksByTitle($('input').val());
   })
@@ -19,7 +19,6 @@ $(document).ready(function(){
 
   Trackster.renderTracks = function(tracks) {
     for(i=0; i<tracks.length; i++){
-      console.log(tracks[i]);
       var a= '<div class="row detail-section">' +
       '<div class="col-xs-1 ">' + 
         '<a href="' +tracks[i].url+ '">'+
@@ -31,12 +30,12 @@ $(document).ready(function(){
       '<div class="col-xs-2"><img src="' + tracks[i].image[1]['#text'] + '"/></div>' +
       '<div class="col-xs-1 col-xs-offset-1">'+numeral(tracks[i].listeners).format('0,0')+'</div>' +
       '<div class="col-xs-1">'+tracks[i].streamable+'</div>' + 
-    '</div>'; 
-
-    $('#search-result').append(a);
+      '</div>'; 
+      
+      $('#search-result').append(a);
     }
   }
-
+  
   Trackster.searchTracksByTitle= function(title){
     $.ajax({
       url:"https://ws.audioscrobbler.com/2.0/?method=track.search&track=" +title+ "&api_key=" + API_KEY + "&format=json",
