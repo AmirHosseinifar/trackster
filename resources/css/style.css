@@ -36,4 +36,23 @@ html {
   padding-bottom: 6px;
 }
 
+.detail-section {
+  align-items: center;
+  border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+  margin-bottom: 2px;
+  display: flex;
+  padding: .6rem;
+  line-height: 1;
+}
+
+.detail-section:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.play-button {
+  color: #ff00ab;
+}
+
+
+
 

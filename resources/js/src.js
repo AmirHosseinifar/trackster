@@ -1,17 +1,22 @@
 $(document).ready(function(){
+  
   const API_KEY = 'e6c125d795116f5ac59abd4b047bb941';
   var Trackster = {};
   $("#search").click(function(){
     Trackster.searchTracksByTitle($('input').val());
   })
 
+  $("#search").click(function(){
+    $('#search-result').empty();
+  })
+
   Trackster.renderTracks = function(tracks) {
     for(i=0; i<tracks.length; i++){
       console.log(tracks[i]);
-      var a= '<div class="row">' +
+      var a= '<div class="row detail-section">' +
       '<div class="col-xs-1 ">' + 
         '<a href="' +tracks[i].url+ '">'+
-          '<i class="far fa-play-circle fa-2x"></i>' +
+          '<i class="far fa-play-circle fa-2x play-button"></i>' +
         '</a>'+
       '</div>' +
       '<div class="col-xs-3">'+tracks[i].name+'</div>' +
