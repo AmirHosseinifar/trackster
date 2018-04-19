@@ -1,0 +1,39 @@
+html {
+  font-size: 16px;
+}
+
+.header {
+  background-color: rgb(35, 2, 63);
+  height: 100px;
+  padding: 2.75rem 0;
+}
+
+.header h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Righteous", cursive;
+  color: #ff00ab;
+}
+
+.header input {
+  border-radius: 19px;
+  margin-right: .625rem;
+  height: 38px;
+}
+
+.header .fa-search {
+  background-color: #ff00ab;
+  border-radius: 19px;
+  color: #22013f;
+  padding: .5rem;
+  text-align: center;
+}
+
+.categories {
+  background-color: rgb(104, 0, 255);
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
